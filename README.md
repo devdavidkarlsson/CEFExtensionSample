@@ -2,14 +2,14 @@ Chromium Embedded Framework Simple Application
 ==============================================
 A simple hello world application to get you started with CEF3.
 
-It setups a browser, loads a local file and binds JS methods.
+The application shows how interfacing between web and native code is performed using chromium embedded framework (CEF).
 
-LICENSE
--------
-(MIT)
+The process is as follows: 
 
-Copyright (c) 2013 Álan Crístoffer
+- Define native methods.
+- Register native method with V8 using CefRegisterExtension.
+- Parse the extension calls in the native C++ code using CefV8Handlers.
+- Pass the response back to the web code.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The pattern basically resambles a messaging pattern.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

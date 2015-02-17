@@ -13,3 +13,4 @@ The process is as follows:
 
 The pattern basically resambles a messaging pattern.
 
+(Original code: https://github.com/acristoffers/CEFSimpleSample)

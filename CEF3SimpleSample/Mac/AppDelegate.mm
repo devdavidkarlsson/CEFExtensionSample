@@ -1,4 +1,4 @@
-﻿
+
 #import "AppDelegate.h"
 
 #include "include/cef_app.h"
@@ -14,6 +14,8 @@
 -(void)dealloc
 {
     [super dealloc];
+
+    
 }
 
 -(BOOL)applicationShouldTerminateAfterLastWindowClosed: (NSApplication *)sender
@@ -52,8 +54,10 @@
     }
 
     if ( path.empty() ) {
-        path = [[[NSBundle mainBundle] resourcePath] cStringUsingEncoding:NSUTF8StringEncoding];
-        path = "file://" + path + "/html/index.html";
+        //path= "http://html5test.com/";
+        //path = [[[NSBundle mainBundle] resourcePath] cStringUsingEncoding:NSUTF8StringEncoding];
+        //path = "file://" + path + "/html/index.html";
+        path = "https://play.wimpmusic.com/";
     }
 
     info.SetAsChild([window contentView], 0, 0, [[window contentView] frame].size.width, [[window contentView] frame].size.height);
